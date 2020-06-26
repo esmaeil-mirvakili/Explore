@@ -1,0 +1,10 @@
+{
+  "pluginId": "core",
+  "language": "PERSIAN",
+  "languages": {
+    "welcome_msg": "",
+    "search": "",
+    "clear": "",
+    "query_here": ""
+  }
+}

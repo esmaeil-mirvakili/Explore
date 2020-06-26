@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="rootPane" fx:controller="net.esmaeil.explore.ui.controller.MainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar fx:id="menuBar" />
+            <ToolBar fx:id="toolBar" prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <TreeView fx:id="fileTree" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <AnchorPane prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="statusLabel" prefHeight="17.0" prefWidth="57.0" text="" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding></Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <right>
+      <Accordion fx:id="operationBox" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="untitled 2" />
+        </panes>
+      </Accordion>
+   </right>
+   <center>
+       <VBox prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+           <children>
+               <AnchorPane prefWidth="200.0">
+                   <children>
+                       <Label fx:id="searchPathLabel" layoutX="63.0" layoutY="6.0" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Label>
+                   </children>
+               </AnchorPane>
+               <TextField fx:id="queryField">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></TextField>
+               <HBox alignment="CENTER" prefWidth="200.0" spacing="5.0">
+                   <children>
+                       <Button fx:id="searchButton" mnemonicParsing="false" text="Search" />
+                       <Button fx:id="clearButton" mnemonicParsing="false" text="Clear" />
+                   </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TableView fx:id="searchTable" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+           </children>
+       </VBox>
+   </center>
+</BorderPane>
